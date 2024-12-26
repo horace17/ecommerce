@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,7 +11,7 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/f" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- script
     ================================================== -->
-    <script src="js/modernizr.js"></script>
+    <script src="{% static 'assets/js/modernizr.js' %}"></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -96,7 +97,7 @@
 
           <form role="search" method="get" class="search-form" action="">
             <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value="" name="s" />
-            <button type="submit" class="search-submit"><svg class="search"><use xlink:href="#search"></use></svg></button>
+            <button type="submit" class="search-submit"><svg class="search"><use href="#search"></use></svg></button>
           </form>
 
           <h5 class="cat-list-title">Browse Categories</h5>
@@ -132,17 +133,17 @@
       <nav id="header-nav" class="navbar navbar-expand-lg px-3 mb-3">
         <div class="container-fluid">
           <a class="navbar-brand" href="index.html">
-            <img src="images/main-logo.png" class="logo">
+            <img src="{% static 'assets/images/main-logo.png' %}" class="logo">
           </a>
           <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <svg class="navbar-icon">
-              <use xlink:href="#navbar-icon"></use>
+              <use href="#navbar-icon"></use>
             </svg>
           </button>
           <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
             <div class="offcanvas-header px-4 pb-0">
               <a class="navbar-brand" href="index.html">
-                <img src="images/main-logo.png" class="logo">
+                <img src="{% static 'assets/images/main-logo.png' %}" class="logo">
               </a>
               <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
             </div>
@@ -201,21 +202,21 @@
                       <li class="search-item pe-3">
                         <a href="#" class="search-button">
                           <svg class="search">
-                            <use xlink:href="#search"></use>
+                            <use href="#search"></use>
                           </svg>
                         </a>
                       </li>
                       <li class="pe-3">
                         <a href="#">
                           <svg class="user">
-                            <use xlink:href="#user"></use>
+                            <use href="#user"></use>
                           </svg>
                         </a>
                       </li>
                       <li>
                         <a href="cart.html">
                           <svg class="cart">
-                            <use xlink:href="#cart"></use>
+                            <use href="#cart"></use>
                           </svg>
                         </a>
                       </li>
@@ -242,7 +243,7 @@
                 </div>
                 <div class="col-md-5">
                   <div class="image-holder">
-                    <img src="images/banner-image.png" alt="banner">
+                    <img src="{% static 'assets/images/banner-image.png' %}" alt="banner">
                   </div>
                 </div>
               </div>
@@ -259,7 +260,7 @@
                 </div>
                 <div class="col-md-5">
                   <div class="image-holder">
-                    <img src="images/banner-image.png" alt="banner">
+                    <img src="{% static 'assets/images/banner-image.png' %}" alt="banner">
                   </div>
                 </div>
               </div>
@@ -269,12 +270,12 @@
       </div>
       <div class="swiper-icon swiper-arrow swiper-arrow-prev">
         <svg class="chevron-left">
-          <use xlink:href="#chevron-left" />
+          <use href="#chevron-left" />
         </svg>
       </div>
       <div class="swiper-icon swiper-arrow swiper-arrow-next">
         <svg class="chevron-right">
-          <use xlink:href="#chevron-right" />
+          <use href="#chevron-right" />
         </svg>
       </div>
     </section>
@@ -285,7 +286,7 @@
             <div class="icon-box d-flex">
               <div class="icon-box-icon pe-3 pb-3">
                 <svg class="cart-outline">
-                  <use xlink:href="#cart-outline" />
+                  <use href="#cart-outline" />
                 </svg>
               </div>
               <div class="icon-box-content">
@@ -298,7 +299,7 @@
             <div class="icon-box d-flex">
               <div class="icon-box-icon pe-3 pb-3">
                 <svg class="quality">
-                  <use xlink:href="#quality" />
+                  <use href="#quality" />
                 </svg>
               </div>
               <div class="icon-box-content">
@@ -311,7 +312,7 @@
             <div class="icon-box d-flex">
               <div class="icon-box-icon pe-3 pb-3">
                 <svg class="price-tag">
-                  <use xlink:href="#price-tag" />
+                  <use href="#price-tag" />
                 </svg>
               </div>
               <div class="icon-box-content">
@@ -324,7 +325,7 @@
             <div class="icon-box d-flex">
               <div class="icon-box-icon pe-3 pb-3">
                 <svg class="shield-plus">
-                  <use xlink:href="#shield-plus" />
+                  <use href="#shield-plus" />
                 </svg>
               </div>
               <div class="icon-box-content">
@@ -350,11 +351,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item1.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item1.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -368,11 +369,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item2.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item2.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -386,11 +387,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item3.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item3.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -404,11 +405,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item4.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item4.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -422,11 +423,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item5.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item5.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -457,11 +458,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item6.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item6.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -475,11 +476,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item7.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item7.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -493,11 +494,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item8.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item8.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -511,11 +512,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item9.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item9.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between align-items-baseline pt-3">
@@ -529,11 +530,11 @@
               <div class="swiper-slide">
                 <div class="product-card position-relative">
                   <div class="image-holder">
-                    <img src="images/product-item10.jpg" alt="product-item" class="img-fluid">
+                    <img src="{% static 'assets/images/product-item10.jpg' %}" alt="product-item" class="img-fluid">
                   </div>
                   <div class="cart-concern position-absolute">
                     <div class="cart-button d-flex">
-                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use xlink:href="#cart-outline"></use></svg></a>
+                      <a href="#" class="btn btn-medium btn-black">Add to Cart<svg class="cart-outline"><use href="#cart-outline"></use></svg></a>
                     </div>
                   </div>
                   <div class="card-detail d-flex justify-content-between pt-3">
@@ -550,7 +551,7 @@
       </div>
       <div class="swiper-pagination position-absolute text-center"></div>
     </section>
-    <section id="yearly-sale" class="bg-light-blue overflow-hidden mt-5 padding-xlarge" style="background-image: url('images/single-image1.png');background-position: right; background-repeat: no-repeat;">
+    <section id="yearly-sale" class="bg-light-blue overflow-hidden mt-5 padding-xlarge" style="background-image: url('{% static 'assets/images/single-image1.png' %}');background-position: right; background-repeat: no-repeat;">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="col-md-6 col-sm-12">
           <div class="text-content offset-4 padding-medium">
@@ -577,7 +578,7 @@
             <div class="col-lg-4 col-sm-12">
               <div class="card border-none me-3">
                 <div class="card-image">
-                  <img src="images/post-item1.jpg" alt="" class="img-fluid">
+                  <img src="{% static 'assets/images/post-item1.jpg' %}" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="card-body text-uppercase">
@@ -593,7 +594,7 @@
             <div class="col-lg-4 col-sm-12">
               <div class="card border-none me-3">
                 <div class="card-image">
-                  <img src="images/post-item2.jpg" alt="" class="img-fluid">
+                  <img src="{% static 'assets/images/post-item2.jpg' %}" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="card-body text-uppercase">
@@ -609,7 +610,7 @@
             <div class="col-lg-4 col-sm-12">
               <div class="card border-none me-3">
                 <div class="card-image">
-                  <img src="images/post-item3.jpg" alt="" class="img-fluid">
+                  <img src="{% static 'assets/images/post-item3.jpg' %}" alt="" class="img-fluid">
                 </div>
               </div>
               <div class="card-body text-uppercase">
@@ -632,13 +633,13 @@
           <div class="review-content position-relative">
             <div class="swiper-icon swiper-arrow swiper-arrow-prev position-absolute d-flex align-items-center">
               <svg class="chevron-left">
-                <use xlink:href="#chevron-left" />
+                <use href="#chevron-left" />
               </svg>
             </div>
             <div class="swiper testimonial-swiper">
               <div class="quotation text-center">
                 <svg class="quote">
-                  <use xlink:href="#quote" />
+                  <use href="#quote" />
                 </svg>
               </div>
               <div class="swiper-wrapper">
@@ -648,19 +649,19 @@
                     <blockquote>“Tempus oncu enim pellen tesque este pretium in neque, elit morbi sagittis lorem habi mattis Pellen tesque pretium feugiat vel morbi suspen dise sagittis lorem habi tasse morbi.”</blockquote>
                     <div class="rating">
                       <svg class="star star-fill">
-                        <use xlink:href="#star-fill"></use>
+                        <use href="#star-fill"></use>
                       </svg>
                       <svg class="star star-fill">
-                        <use xlink:href="#star-fill"></use>
+                        <use href="#star-fill"></use>
                       </svg>
                       <svg class="star star-fill">
-                        <use xlink:href="#star-fill"></use>
+                        <use href="#star-fill"></use>
                       </svg>
                       <svg class="star star-half">
-                        <use xlink:href="#star-half"></use>
+                        <use href="#star-half"></use>
                       </svg>
                       <svg class="star star-empty">
-                        <use xlink:href="#star-empty"></use>
+                        <use href="#star-empty"></use>
                       </svg>
                     </div>
                     <div class="author-detail">
@@ -674,19 +675,19 @@
                     <blockquote>“A blog is a digital publication that can complement a website or exist independently. A blog may include articles, short posts, listicles, infographics, videos, and other digital content.”</blockquote>
                     <div class="rating">
                       <svg class="star star-fill">
-                        <use xlink:href="#star-fill"></use>
+                        <use href="#star-fill"></use>
                       </svg>
                       <svg class="star star-fill">
-                        <use xlink:href="#star-fill"></use>
+                        <use href="#star-fill"></use>
                       </svg>
                       <svg class="star star-fill">
-                        <use xlink:href="#star-fill"></use>
+                        <use href="#star-fill"></use>
                       </svg>
                       <svg class="star star-half">
-                        <use xlink:href="#star-half"></use>
+                        <use href="#star-half"></use>
                       </svg>
                       <svg class="star star-empty">
-                        <use xlink:href="#star-empty"></use>
+                        <use href="#star-empty"></use>
                       </svg>
                     </div>
                     <div class="author-detail">
@@ -698,7 +699,7 @@
             </div>
             <div class="swiper-icon swiper-arrow swiper-arrow-next position-absolute d-flex align-items-center">
               <svg class="chevron-right">
-                <use xlink:href="#chevron-right" />
+                <use href="#chevron-right" />
               </svg>
             </div>
           </div>
@@ -737,50 +738,50 @@
           <div class="d-flex flex-wrap">
             <figure class="instagram-item pe-2">
               <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item1.jpg" alt="instagram" class="insta-image">
+                <img src="{% static 'assets/images/insta-item1.jpg' %}" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
+                    <use href="#instagram"></use>
                   </svg>
                 </div>
               </a>
             </figure>
             <figure class="instagram-item pe-2">
               <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item2.jpg" alt="instagram" class="insta-image">
+                <img src="{% static 'assets/images/insta-item2.jpg' %}" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
+                    <use href="#instagram"></use>
                   </svg>
                 </div>
               </a>
             </figure>
             <figure class="instagram-item pe-2">
               <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item3.jpg" alt="instagram" class="insta-image">
+                <img src="{% static 'assets/images/insta-item3.jpg' %}" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
+                    <use href="#instagram"></use>
                   </svg>
                 </div>
               </a>
             </figure>
             <figure class="instagram-item pe-2">
               <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item4.jpg" alt="instagram" class="insta-image">
+                <img src="{% static 'assets/images/insta-item4.jpg' %}" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
+                    <use href="#instagram"></use>
                   </svg>
                 </div>
               </a>
             </figure>
             <figure class="instagram-item pe-2">
               <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="images/insta-item5.jpg" alt="instagram" class="insta-image">
+                <img src="{% static 'assets/images/insta-item5.jpg' %}" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
-                    <use xlink:href="#instagram"></use>
+                    <use href="#instagram"></use>
                   </svg>
                 </div>
               </a>
@@ -796,42 +797,42 @@
             <div class="row d-flex flex-wrap justify-content-between">
               <div class="col-lg-3 col-sm-6 pb-3">
                 <div class="footer-menu">
-                  <img src="images/main-logo.png" alt="logo">
+                  <img src="{% static 'assets/images/main-logo.png' %}" alt="logo">
                   <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
                   <div class="social-links">
                     <ul class="d-flex list-unstyled">
                       <li>
                         <a href="#">
                           <svg class="facebook">
-                            <use xlink:href="#facebook" />
+                            <use href="#facebook" />
                           </svg>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <svg class="instagram">
-                            <use xlink:href="#instagram" />
+                            <use href="#instagram" />
                           </svg>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <svg class="twitter">
-                            <use xlink:href="#twitter" />
+                            <use href="#twitter" />
                           </svg>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <svg class="linkedin">
-                            <use xlink:href="#linkedin" />
+                            <use href="#linkedin" />
                           </svg>
                         </a>
                       </li>
                       <li>
                         <a href="#">
                           <svg class="youtube">
-                            <use xlink:href="#youtube" />
+                            <use href="#youtube" />
                           </svg>
                         </a>
                       </li>
@@ -905,8 +906,8 @@
             <div class="Shipping d-flex">
               <p>We ship with:</p>
               <div class="card-wrap ps-2">
-                <img src="images/dhl.png" alt="visa">
-                <img src="images/shippingcard.png" alt="mastercard">
+                <img src="{% static 'assets/images/dhl.png' %}" alt="visa">
+                <img src="{% static 'assets/images/shippingcard.png' %}" alt="mastercard">
               </div>
             </div>
           </div>
@@ -914,9 +915,9 @@
             <div class="payment-method d-flex">
               <p>Payment options:</p>
               <div class="card-wrap ps-2">
-                <img src="images/visa.jpg" alt="visa">
-                <img src="images/mastercard.jpg" alt="mastercard">
-                <img src="images/paypal.jpg" alt="paypal">
+                <img src="{% static 'assets/images/visa.jpg' %}" alt="visa">
+                <img src="{% static 'assets/images/mastercard.jpg' %}" alt="mastercard">
+                <img src="{% static 'assets/images/paypal.jpg' %}" alt="paypal">
               </div>
             </div>
           </div>
@@ -929,10 +930,10 @@
         </div>
       </div>
     </div>
-    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="{% static 'assets/js/jquery-1.11.0.min.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/plugins.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/plugins.js' %}"></script>
+    <script type="text/javascript" src="{% static 'assets/js/script.js' %}"></script>
   </body>
 </html>
