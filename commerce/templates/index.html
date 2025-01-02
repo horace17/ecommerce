@@ -214,6 +214,7 @@
     </section>
 {#End of local posts section#}
 
+{#    Beginning of testimonials section#}
     <section id="testimonials" class="position-relative">
       <div class="container">
         <div class="row">
@@ -230,10 +231,12 @@
                 </svg>
               </div>
               <div class="swiper-wrapper">
+
+              {% for testimonial in testimonials %}
                 <div class="swiper-slide text-center d-flex justify-content-center">
                   <div class="review-item col-md-10">
                     <i class="icon icon-review"></i>
-                    <blockquote>“Tempus oncu enim pellen tesque este pretium in neque, elit morbi sagittis lorem habi mattis Pellen tesque pretium feugiat vel morbi suspen dise sagittis lorem habi tasse morbi.”</blockquote>
+                    <blockquote>“{{ testimonial.testimonial_description }}”</blockquote>
                     <div class="rating">
                       <svg class="star star-fill">
                         <use href="#star-fill"></use>
@@ -252,36 +255,12 @@
                       </svg>
                     </div>
                     <div class="author-detail">
-                      <div class="name text-dark text-uppercase pt-2">Emma Chamberlin</div>
+                      <div class="name text-dark text-uppercase pt-2">{{ testimonial.testimonial_author }}</div>
                     </div>
                   </div>
                 </div>
-                <div class="swiper-slide text-center d-flex justify-content-center">
-                  <div class="review-item col-md-10">
-                    <i class="icon icon-review"></i>
-                    <blockquote>“A blog is a digital publication that can complement a website or exist independently. A blog may include articles, short posts, listicles, infographics, videos, and other digital content.”</blockquote>
-                    <div class="rating">
-                      <svg class="star star-fill">
-                        <use href="#star-fill"></use>
-                      </svg>
-                      <svg class="star star-fill">
-                        <use href="#star-fill"></use>
-                      </svg>
-                      <svg class="star star-fill">
-                        <use href="#star-fill"></use>
-                      </svg>
-                      <svg class="star star-half">
-                        <use href="#star-half"></use>
-                      </svg>
-                      <svg class="star star-empty">
-                        <use href="#star-empty"></use>
-                      </svg>
-                    </div>
-                    <div class="author-detail">
-                      <div class="name text-dark text-uppercase pt-2">Jennie Rose</div>
-                    </div>
-                  </div>
-                </div>
+               {% endfor %}
+
               </div>
             </div>
             <div class="swiper-icon swiper-arrow swiper-arrow-next position-absolute d-flex align-items-center">
@@ -294,9 +273,9 @@
       </div>
       <div class="swiper-pagination"></div>
     </section>
+{#end of testimonials section#}
 
-
-
+{#This section, rendering models isn't working.#}
     <section id="subscribe" class="container-grid padding-large position-relative overflow-hidden">
       <div class="container">
         <div class="row">
@@ -320,7 +299,7 @@
       </div>
     </section>
 
-
+{#Shop our insta section#}
 
     <section id="instagram" class="padding-large overflow-hidden no-padding-top">
       <div class="container">
@@ -329,9 +308,11 @@
             <h2 class="display-7">Shop Our Insta</h2>
           </div>
           <div class="d-flex flex-wrap">
-            <figure class="instagram-item pe-2">
+
+          {% for insta in instas %}
+              <figure class="instagram-item pe-2">
               <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="{% static 'images/insta-item1.jpg' %}" alt="instagram" class="insta-image">
+                <img src="{{ insta.insta_image.url }}" alt="instagram" class="insta-image">
                 <div class="icon-overlay position-absolute d-flex justify-content-center">
                   <svg class="instagram">
                     <use href="#instagram"></use>
@@ -339,46 +320,8 @@
                 </div>
               </a>
             </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="{% static 'images/insta-item2.jpg' %}" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="{% static 'images/insta-item3.jpg' %}" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="{% static 'images/insta-item4.jpg' %}" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
-            <figure class="instagram-item pe-2">
-              <a href="https://templatesjungle.com/" class="image-link position-relative">
-                <img src="{% static 'images/insta-item5.jpg' %}" alt="instagram" class="insta-image">
-                <div class="icon-overlay position-absolute d-flex justify-content-center">
-                  <svg class="instagram">
-                    <use href="#instagram"></use>
-                  </svg>
-                </div>
-              </a>
-            </figure>
+
+          {% endfor %}
           </div>
         </div>
       </div>
