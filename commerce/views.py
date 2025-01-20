@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.response import Response
-from . serializers import MobileSerializer
+from . serializers import MobileSerializer, WatchSerializer
 from rest_framework import generics, status
 
 from . models import Slider, Mobile, Service, Watch, Yearly, Latest, Testimonial, Subscription, Insta
@@ -34,7 +34,7 @@ class MobileView(generics.ListAPIView):
     queryset = Mobile.objects.all()
     serializer_class = MobileSerializer
 
-# better ? yeah,
-# for create use generics.CreateAPIView
-# for delete, update, read, single use generics.UpdateAPIView or APIView with specific methods
-# then place their paths kwa hio endpoints.py
+# API section of Watch model
+class WatchView(generics.ListAPIView):
+    queryset = Watch.objects.all()
+    serializer_class = WatchSerializer
